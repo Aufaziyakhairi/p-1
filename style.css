@@ -1,0 +1,403 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    background-color: #021526;
+    color: white;
+    font-family: "Montserrat", sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+header {
+    padding: 10px;
+    height: 100vh;
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+header .text {
+    width: 50%;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: justify;
+}
+
+header .text h1 {
+    font-size: 5rem;
+}
+
+header .text p {
+    color: #A9A9A9;
+}
+
+header .text a {
+    text-decoration: none;
+    width: 20%;
+    font-size: 1rem;
+    color: white;
+    text-align: center;
+    transition: 700ms;
+    margin-top: 10%;
+    margin-left: 100%;
+    padding: 10px;
+}
+
+header .text a:hover {
+    border-radius: 10px;
+    border: solid 1px white;
+}
+
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    top: 0;
+    width: 100%;
+    position: fixed;
+    padding: 15px;
+    background-color: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(10px);
+}
+
+nav .search {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 20%;
+}
+
+nav .search input {
+    width: 100%;
+    padding: 5px;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    transition: 700ms;
+}
+
+nav .search button {
+    color: black;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 700ms;
+}
+
+nav .search button:hover {
+    background-color: black;
+    color: white;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    justify-content: space-around;
+    width: 60%;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    transition: 700ms;
+}
+
+nav a:hover {
+    color: #2E073F;
+}
+
+main .about {
+    padding: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    gap: 10px;
+}
+
+main .about .text {
+    width: 40%;
+    height: auto;
+}
+
+main .about .text h1 {
+    font-size: 3rem;
+    text-align: left;
+}
+
+main .about .text p {
+    color: #A9A9A9;
+    text-align: justify;
+}
+
+main .about .grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    width: 50%;
+}
+
+main .certificate {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px;
+    gap: 10px;
+}
+
+main .certificate h1 {
+    font-size: 2rem;
+    text-align: left;
+    width: 100%;
+}
+
+main .certificate .card {
+    width: 35%;
+    background-color: white;
+    color: black;
+    padding: 10px;
+    text-align: center;
+}
+
+main .certificate .card h1 {
+    font-size: 1.5rem;
+    text-align: left;
+}
+
+main .project {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+}
+
+main .project h1 {
+    font-size: 2rem;
+    text-align: left;
+    width: 100%;
+}
+
+main .project .card {
+    width: 30%;
+    display: grid;
+    align-items: center;
+    justify-content: space-around;
+    padding: 10px;
+    background-color: white;
+    color: black;
+    border-radius: 10px;
+    transition: 700ms;
+}
+
+main .project .card h1 {
+    font-size: 1.5rem;
+    grid-column-start: 1;
+    grid-column-end: 1;
+    grid-row-start: 1;
+    grid-row-end: 1;
+}
+
+main .project .card p {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 2;
+    grid-row-end: 2;
+}
+
+main .project .card a {
+    grid-column-start: 2;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 1;
+    text-decoration: none;
+    color: black;
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 2rem;
+}
+
+main .contact {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+}
+
+main .contact h1 {
+    font-size: 2rem;
+    text-align: left;
+    width: 100%;
+}
+
+main .contact form {
+    display: grid;
+    gap: 10px;
+    padding: 10px;
+    align-items: center;
+    justify-content: space-around;
+}
+
+main .contact form input,
+main .contact form textarea {
+    padding: 10px;
+    border-radius: 10px;
+    transition: 700ms;
+    border: none;
+}
+
+main .contact form #name {
+    grid-column-start: 1;
+    grid-column-end: 1;
+    grid-row-start: 1;
+    grid-row-end: 1;
+}
+
+main .contact form #email {
+    grid-column-start: 1;
+    grid-column-end: 1;
+    grid-row-start: 2;
+    grid-row-end: 2;
+}
+
+main .contact form textarea {
+    grid-column-start: 2;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 3;
+}
+
+main .contact form .submit {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 3;
+    grid-row-end: 3;
+    cursor: pointer;
+}
+
+main .contact form .submit:hover {
+    background-color: black;
+    color: white;
+}
+
+footer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    padding: 100px;
+    background-color: black;
+}
+
+@media screen and (max-width: 768px) {
+    header {
+        flex-direction: column;
+        height: auto;
+        padding-top: 80px; /* agar tidak tertutup nav */
+    }
+
+    header .text {
+        width: 100%;
+        padding: 20px;
+        text-align: center;
+    }
+
+    header .text h1 {
+        font-size: 2.2rem;
+    }
+
+    header .text a {
+        width: 80%;
+        margin-left: 0;
+        margin-top: 20px;
+    }
+
+    nav {
+        flex-direction: column;
+        padding: 10px;
+        position: fixed;
+        z-index: 100;
+    }
+
+    nav ul {
+        flex-direction: column;
+        width: 100%;
+        align-items: center;
+        gap: 10px;
+    }
+
+    nav .search {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    main .about,
+    main .certificate,
+    main .project,
+    main .contact {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        gap: 20px;
+    }
+
+    main .about .text,
+    main .about .grid,
+    main .certificate .card,
+    main .project .card,
+    main .contact form {
+        width: 95% !important;
+        min-width: 0;
+    }
+
+    main .about .grid {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+
+    main .certificate .card,
+    main .project .card {
+        width: 95% !important;
+        margin-bottom: 15px;
+    }
+
+    main .project .card {
+        grid-template-columns: 1fr;
+        font-size: 1rem;
+    }
+
+    main .contact form {
+        gap: 10px;
+    }
+
+    main .contact form #name,
+    main .contact form #email,
+    main .contact form textarea,
+    main .contact form .submit {
+        width: 100%;
+    }
+
+    footer {
+        flex-direction: column;
+        padding: 30px 10px;
+        text-align: center;
+    }
+}
