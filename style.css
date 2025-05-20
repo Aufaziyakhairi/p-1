@@ -7,7 +7,7 @@
 body {
     padding: 0;
     margin: 0;
-    background-color: #021526;
+    background-color: #17153B;
     color: white;
     font-family: "Montserrat", sans-serif;
 }
@@ -42,21 +42,32 @@ header .text p {
     color: #A9A9A9;
 }
 
-header .text a {
+header a {
     text-decoration: none;
-    width: 20%;
-    font-size: 1rem;
+    position: absolute;
+    /* width: 50%; */
+    font-size: 2rem;
     color: white;
     text-align: center;
     transition: 700ms;
-    margin-top: 10%;
-    margin-left: 100%;
+    /* margin-top: 10%; */
+    /* margin-left: 100%; */
     padding: 10px;
+    bottom: 0;
+    left: 50%;
 }
 
-header .text a:hover {
-    border-radius: 10px;
-    border: solid 1px white;
+header a:hover {
+    /* border-radius: 10px;
+    border: solid 1px white; */
+    color: rgba(255, 255, 255, 0.63);
+}
+header .gambar {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 nav {
@@ -68,7 +79,7 @@ nav {
     width: 100%;
     position: fixed;
     padding: 15px;
-    background-color: rgba(0, 0, 0, 0.7);
+    background-color: rgba(0, 0, 0, 0);
     backdrop-filter: blur(10px);
 }
 
@@ -117,7 +128,7 @@ nav a {
 }
 
 nav a:hover {
-    color: #2E073F;
+    color: #C8ACD6;
 }
 
 main .about {
@@ -127,10 +138,15 @@ main .about {
     justify-content: space-around;
     align-items: center;
     gap: 10px;
+    height: 100vh;
 }
 
 main .about .text {
     width: 40%;
+    height: auto;
+    background: linear-gradient(to right, #c8acd600, #2E236C);
+    padding: 10px;
+    border-radius: 10px;
     height: auto;
 }
 
@@ -151,6 +167,13 @@ main .about .grid {
     width: 50%;
 }
 
+main .about  .card  {
+    width: 100%;
+    text-align: justify;
+    background: linear-gradient(to bottom, #c8acd600, #2E236C);
+    padding: 10px;
+    border-radius: 10px;
+}
 main .certificate {
     display: flex;
     flex-wrap: wrap;
@@ -168,10 +191,11 @@ main .certificate h1 {
 
 main .certificate .card {
     width: 35%;
-    background-color: white;
-    color: black;
+    background: linear-gradient(to top, #c8acd600, #2E236C);
+    color: white;
     padding: 10px;
     text-align: center;
+    border-radius: 10px;
 }
 
 main .certificate .card h1 {
@@ -200,8 +224,8 @@ main .project .card {
     align-items: center;
     justify-content: space-around;
     padding: 10px;
-    background-color: white;
-    color: black;
+    background: linear-gradient(to top, #c8acd600, #2E236C);
+    color: white;
     border-radius: 10px;
     transition: 700ms;
 }
@@ -244,7 +268,7 @@ main .contact {
 
 main .contact h1 {
     font-size: 2rem;
-    text-align: left;
+    text-align: center;
     width: 100%;
 }
 
@@ -304,7 +328,7 @@ footer {
     justify-content: space-around;
     align-items: center;
     padding: 100px;
-    background-color: black;
+    background: linear-gradient(to bottom, #c8acd600, #2E236C);
 }
 
 @media screen and (max-width: 768px) {
@@ -385,7 +409,11 @@ footer {
     }
 
     main .contact form {
-        gap: 10px;
+        /* gap: 10px; */
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
     }
 
     main .contact form #name,
