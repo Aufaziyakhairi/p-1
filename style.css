@@ -36,6 +36,11 @@ header .text {
 
 header .text h1 {
     font-size: 5rem;
+
+}
+
+h1 {
+    font-family: "Pacifico", cursive;
 }
 
 header .text p {
@@ -62,6 +67,7 @@ header a:hover {
     border: solid 1px white; */
     color: rgba(255, 255, 255, 0.63);
 }
+
 header .gambar {
     width: 50%;
     height: 100%;
@@ -141,13 +147,28 @@ main .about {
     height: 100vh;
 }
 
-main .about .text {
+main .about .profile {
     width: 40%;
     height: auto;
     background: linear-gradient(to right, #c8acd600, #2E236C);
     padding: 10px;
     border-radius: 10px;
     height: auto;
+    position: relative;
+}
+
+main .about .profile img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+main .about .profile .text {
+    position: absolute;
+    bottom: 0;
+    padding: 10px;
+    background: linear-gradient(to bottom, #c8acd600, #2E236C);
+    border-radius: 10px;
 }
 
 main .about .text h1 {
@@ -167,13 +188,14 @@ main .about .grid {
     width: 50%;
 }
 
-main .about  .card  {
+main .about .card {
     width: 100%;
     text-align: justify;
     background: linear-gradient(to bottom, #c8acd600, #2E236C);
     padding: 10px;
     border-radius: 10px;
 }
+
 main .certificate {
     display: flex;
     flex-wrap: wrap;
@@ -200,7 +222,7 @@ main .certificate .card {
 
 main .certificate .card h1 {
     font-size: 1.5rem;
-    text-align: left;
+    text-align: center;
 }
 
 main .project {
@@ -335,7 +357,8 @@ footer {
     header {
         flex-direction: column;
         height: auto;
-        padding-top: 80px; /* agar tidak tertutup nav */
+        padding-top: 80px;
+        /* agar tidak tertutup nav */
     }
 
     header .text {
