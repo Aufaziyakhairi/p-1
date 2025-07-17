@@ -2,29 +2,29 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-}
-
-body {
+  }
+  
+  body {
     padding: 0;
     margin: 0;
     background-color: #17153B;
     color: white;
     font-family: "Montserrat", sans-serif;
-}
-
-html {
+  }
+  
+  html {
     scroll-behavior: smooth;
-}
-
-header {
+  }
+  
+  header {
     padding: 10px;
     height: 100vh;
     position: relative;
     display: flex;
     flex-wrap: wrap;
-}
-
-header .text {
+  }
+  
+  header .text {
     width: 50%;
     padding: 20px;
     display: flex;
@@ -32,22 +32,47 @@ header .text {
     flex-wrap: wrap;
     justify-content: center;
     text-align: justify;
-}
-
-header .text h1 {
+  }
+  
+  header .text h1 {
     font-size: 5rem;
-
-}
-
-h1 {
-    font-family: "Pacifico", cursive;
-}
-
-header .text p {
+  }
+  
+  h1 {
+    font-family: 'Roboto', sans-serif;
+    position: relative;
+    font-family: 'Monserrat', cursive; /* atau Montserrat */
+    animation: slideFadeIn 1s ease forwards;
+    opacity: 1000;
+    background: linear-gradient(90deg, #f1eeec, #8460c2, #803dba);
+    background-size: 200% auto;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: gradientFlow 8s ease infinite;
+  }
+  
+  @keyframes slideFadeIn {
+    from {
+      opacity: 10;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 10;
+      transform: translateY(5px);
+    }
+  }
+  
+  @keyframes gradientFlow {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+  
+  header .text p {
     color: #A9A9A9;
-}
-
-header a {
+  }
+  
+  header a {
     text-decoration: none;
     position: absolute;
     /* width: 50%; */
@@ -60,23 +85,23 @@ header a {
     padding: 10px;
     bottom: 0;
     left: 50%;
-}
-
-header a:hover {
+  }
+  
+  header a:hover {
     /* border-radius: 10px;
     border: solid 1px white; */
     color: rgba(255, 255, 255, 0.63);
-}
-
-header .gambar {
+  }
+  
+  header .gambar {
     width: 50%;
     height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-}
-
-nav {
+  }
+  
+  nav {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
@@ -88,58 +113,59 @@ nav {
     background-color: rgba(0, 0, 0, 0);
     backdrop-filter: blur(10px);
     z-index: 10;
-}
-
-nav .search {
+  }
+  
+  nav .search {
     display: flex;
     align-items: center;
     justify-content: space-around;
     width: 20%;
-    gap: 10px;
-}
-
-nav .search input {
+  }
+  
+  nav .search input {
     width: 100%;
     padding: 5px;
     border-radius: 10px;
     border: none;
     outline: none;
     transition: 700ms;
-}
-
-nav .search button {
+  }
+  
+  nav .search button {
     color: black;
     border: none;
     padding: 5px 10px;
     border-radius: 10px;
     cursor: pointer;
     transition: 700ms;
-}
-
-nav .search button:hover {
+    margin-left: 8px; /* tambahkan ini */
+  }
+  
+  
+  nav .search button:hover {
     background-color: black;
     color: white;
-}
-
-nav ul {
+  }
+  
+  nav ul {
     display: flex;
     list-style: none;
     justify-content: space-around;
     width: 60%;
-}
-
-nav a {
+  }
+  
+  nav a {
     color: white;
     text-decoration: none;
     font-size: 18px;
     transition: 700ms;
-}
-
-nav a:hover {
+  }
+  
+  nav a:hover {
     color: #C8ACD6;
-}
-
-main .about {
+  }
+  
+  main .about {
     padding: 10px;
     display: flex;
     flex-wrap: wrap;
@@ -147,9 +173,9 @@ main .about {
     align-items: center;
     gap: 10px;
     height: 100vh;
-}
-
-main .about .profile {
+  }
+  
+  main .about .profile {
     width: 40%;
     height: auto;
     background: linear-gradient(to right, #c8acd600, #2E236C);
@@ -157,48 +183,48 @@ main .about .profile {
     border-radius: 10px;
     height: auto;
     position: relative;
-}
-
-main .about .profile img {
+  }
+  
+  main .about .profile img {
     width: 100%;
     height: auto;
     border-radius: 10px;
-}
-
-main .about .profile .text {
+  }
+  
+  main .about .profile .text {
     position: absolute;
     bottom: 0;
     padding: 10px;
     background: linear-gradient(to bottom, #c8acd600, #2E236C);
     border-radius: 10px;
-}
-
-main .about .text h1 {
+  }
+  
+  main .about .text h1 {
     font-size: 3rem;
     text-align: left;
-}
-
-main .about .text p {
+  }
+  
+  main .about .text p {
     color: #A9A9A9;
     text-align: justify;
-}
-
-main .about .grid {
+  }
+  
+  main .about .grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 20px;
     width: 50%;
-}
-
-main .about .card {
+  }
+  
+  main .about .card {
     width: 100%;
     text-align: justify;
     background: linear-gradient(to bottom, #c8acd600, #2E236C);
     padding: 10px;
     border-radius: 10px;
-}
-
-main .certificate {
+  }
+  
+  main .certificate {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
@@ -206,29 +232,33 @@ main .certificate {
     padding: 10px;
     gap: 10px;
     height: 100vh;
-}
-
-main .certificate h1 {
+  }
+  
+  main .certificate h1 {
     font-size: 2rem;
     text-align: left;
     width: 100%;
-}
-
-main .certificate .card {
+  }
+  
+  main .certificate .card {
     width: 35%;
     background: linear-gradient(to top, #c8acd600, #2E236C);
     color: white;
     padding: 10px;
     text-align: center;
     border-radius: 10px;
-}
-
-main .certificate .card h1 {
+  }
+  
+  main .certificate .card img {
+    width: 100%;
+  }
+  
+  main .certificate .card h1 {
     font-size: 1.5rem;
     text-align: center;
-}
-
-main .project {
+  }
+  
+  main .project {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
@@ -236,15 +266,15 @@ main .project {
     gap: 10px;
     padding: 10px;
     height: 100vh;
-}
-
-main .project h1 {
+  }
+  
+  main .project h1 {
     font-size: 2rem;
     text-align: left;
     width: 100%;
-}
-
-main .project .card {
+  }
+  
+  main .project .card {
     width: 30%;
     display: grid;
     align-items: center;
@@ -254,24 +284,24 @@ main .project .card {
     color: white;
     border-radius: 10px;
     transition: 700ms;
-}
-
-main .project .card h1 {
+  }
+  
+  main .project .card h1 {
     font-size: 1.5rem;
     grid-column-start: 1;
     grid-column-end: 1;
     grid-row-start: 1;
     grid-row-end: 1;
-}
-
-main .project .card p {
+  }
+  
+  main .project .card p {
     grid-column-start: 1;
     grid-column-end: 2;
     grid-row-start: 2;
     grid-row-end: 2;
-}
-
-main .project .card a {
+  }
+  
+  main .project .card a {
     grid-column-start: 2;
     grid-column-end: 2;
     grid-row-start: 1;
@@ -281,9 +311,9 @@ main .project .card a {
     padding: 10px;
     border-radius: 10px;
     font-size: 2rem;
-}
-
-main .contact {
+  }
+  
+  main .contact {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
@@ -291,15 +321,15 @@ main .contact {
     gap: 10px;
     padding: 10px;
     height: 100vh;
-}
-
-main .contact h1 {
+  }
+  
+  main .contact h1 {
     font-size: 2rem;
     text-align: center;
     width: 100%;
-}
-
-main .contact form {
+  }
+  
+  main .contact form {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
@@ -309,135 +339,134 @@ main .contact form {
     padding: 10px;
     background: linear-gradient(to bottom, #c8acd600, #2E236C);
     border-radius: 10px;
-}
-
-main .contact form input,
-main .contact form textarea {
+  }
+  
+  main .contact form input,
+  main .contact form textarea {
     padding: 10px;
     border-radius: 10px;
     transition: 700ms;
     border: none;
     width: 100%;
-}
-
-main .contact form #name {
+  }
+  
+  main .contact form #name {
     grid-column-start: 1;
     grid-column-end: 1;
     grid-row-start: 1;
     grid-row-end: 1;
-}
-
-main .contact form #email {
+  }
+  
+  main .contact form #email {
     grid-column-start: 1;
     grid-column-end: 1;
     grid-row-start: 2;
     grid-row-end: 2;
-}
-
-main .contact form textarea {
+  }
+  
+  main .contact form textarea {
     grid-column-start: 2;
     grid-column-end: 2;
     grid-row-start: 1;
     grid-row-end: 3;
-}
-
-main .contact form .submit {
+  }
+  
+  main .contact form .submit {
     grid-column-start: 1;
     grid-column-end: 3;
     grid-row-start: 3;
     grid-row-end: 3;
     cursor: pointer;
-}
-
-main .contact form .submit:hover {
+  }
+  
+  main .contact form .submit:hover {
     background-color: black;
     color: white;
-}
-main .certificate h1,
-main .project h1,
-main .contact h1 {
+  }
+  main .certificate h1,
+  main .project h1,
+  main .contact h1 {
     text-align: center;
     width: 100%;
     font-size: 5rem;
-}
-
-footer {
+  }
+  
+  footer {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
     align-items: center;
     padding: 100px;
     background: linear-gradient(to bottom, #c8acd600, #2E236C);
-}
-
-
-/* Animasi Fade In dan Fade Out */
-.fade-in {
-    /* animation: fadeIn 1s forwards;
-    opacity: 0; */
-}
-
-.fade-out {
-    /* animation: fadeOut 1s forwards;
-    opacity: 1; */
-}
-
-/* 
-@keyframes fadeIn {
+  }
+  
+  
+  /* Animasi Fade In dan Fade Out */
+  .fade-in {
+    animation: fadeIn 1s forwards;
+    opacity: 0;
+  }
+  
+  .fade-out {
+    animation: fadeOut 1s forwards;
+    opacity: 1;
+  }
+  
+  @keyframes fadeIn {
     to {
         opacity: 1;
     }
-}
-
-@keyframes fadeOut {
+  }
+  
+  @keyframes fadeOut {
     to {
         opacity: 0;
     }
-} */
-
-@media screen and (max-width: 768px) {
+  }
+  
+  @media screen and (max-width: 768px) {
     header {
         flex-direction: column;
         height: auto;
         padding-top: 80px;
         /* agar tidak tertutup nav */
     }
-
+  
     header .text {
         width: 100%;
         padding: 20px;
         text-align: center;
     }
-
+  
     header .text h1 {
         font-size: 2.2rem;
     }
-
+  
     header .text a {
         width: 80%;
         margin-left: 0;
         margin-top: 20px;
     }
-
+  
     nav {
         flex-direction: column;
         padding: 10px;
         position: fixed;
         z-index: 100;
     }
-
+  
     nav ul {
         flex-direction: column;
         width: 100%;
         align-items: center;
         gap: 10px;
     }
-
+  
     nav .search {
         width: 100%;
         margin-bottom: 10px;
     }
-
+  
     main .about,
     main .certificate,
     main .project,
@@ -447,7 +476,7 @@ footer {
         width: 100%;
         gap: 20px;
     }
-
+  
     main .about .text,
     main .about .grid,
     main .certificate .card,
@@ -456,23 +485,23 @@ footer {
         width: 95% !important;
         min-width: 0;
     }
-
+  
     main .about .grid {
         grid-template-columns: 1fr;
         gap: 10px;
     }
-
+  
     main .certificate .card,
     main .project .card {
         width: 95% !important;
         margin-bottom: 15px;
     }
-
+  
     main .project .card {
         grid-template-columns: 1fr;
         font-size: 1rem;
     }
-
+  
     main .contact form {
         /* gap: 10px; */
         display: flex;
@@ -480,21 +509,51 @@ footer {
         justify-content: space-around;
         align-items: center;
     }
-
+  
     main .contact form #name,
     main .contact form #email,
     main .contact form textarea,
     main .contact form .submit {
         width: 100%;
     }
-
+  
     footer {
         flex-direction: column;
         padding: 30px 10px;
         text-align: center;
     }
-}
-
-.hidden {
+  }
+  
+  .hidden {
     display: none !important;
-}
+  }
+  
+  .scroll-reveal {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 1s ease-out, transform 1s ease-out;
+  }
+  
+  .scroll-reveal.show {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  .card {
+    transition: transform 0.5s ease, box-shadow 0.5s ease;
+  }
+  
+  .card:hover {
+    transform: scale(1.03);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+  }
+  
+  .floating {
+    animation: float 3s ease-in-out infinite;
+  }
+  
+  @keyframes float {
+    0% { transform: translatey(0px); }
+    50% { transform: translatey(-15px); }
+    100% { transform: translatey(0px); }
+  }
