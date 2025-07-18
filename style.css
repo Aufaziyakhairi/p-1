@@ -197,6 +197,7 @@
     padding: 10px;
     background: linear-gradient(to bottom, #c8acd600, #2E236C);
     border-radius: 10px;
+    width: 100%;
   }
   
   main .about .text h1 {
@@ -222,6 +223,7 @@
     background: linear-gradient(to bottom, #c8acd600, #2E236C);
     padding: 10px;
     border-radius: 10px;
+    position: relative;
   }
   
   main .certificate {
@@ -424,12 +426,66 @@
     }
   }
   
+  /* Hamburger Menu Styles */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  padding: 5px;
+  z-index: 1001;
+}
+
+.hamburger span {
+  width: 25px;
+  height: 3px;
+  background-color: white;
+  margin: 3px 0;
+  transition: 0.3s;
+  border-radius: 2px;
+}
+
+.hamburger.active span:nth-child(1) {
+  transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.hamburger.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+  transform: rotate(45deg) translate(-5px, -6px);
+}
+
+  @media screen and (max-width: 1024px) {
+    header .text h1 {
+        font-size: 4rem;
+    }
+    
+    nav .search {
+        width: 30%;
+    }
+    
+    nav ul {
+        width: 70%;
+    }
+    
+    main .about .grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+    
+    main .certificate .card,
+    main .project .card {
+        width: 45%;
+    }
+  }
+  
   @media screen and (max-width: 768px) {
     header {
         flex-direction: column;
         height: auto;
         padding-top: 80px;
-        /* agar tidak tertutup nav */
+        text-align: center;
     }
   
     header .text {
@@ -439,75 +495,173 @@
     }
   
     header .text h1 {
-        font-size: 2.2rem;
+        font-size: 2.5rem;
+    }
+    
+    header .gambar {
+        width: 100%;
+        padding: 20px;
+    }
+    
+    header .gambar img {
+        max-width: 250px;
+        height: auto;
     }
   
-    header .text a {
-        width: 80%;
-        margin-left: 0;
-        margin-top: 20px;
+    header a {
+        position: static;
+        margin: 20px auto;
+        transform: translateX(-50%);
+        left: 50%;
     }
   
     nav {
-        flex-direction: column;
-        padding: 10px;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 20px;
         position: fixed;
         z-index: 100;
-    }
-  
-    nav ul {
-        flex-direction: column;
-        width: 100%;
-        align-items: center;
-        gap: 10px;
+        height: 60px;
     }
   
     nav .search {
-        width: 100%;
-        margin-bottom: 10px;
+        width: 200px;
+        margin-bottom: 0;
+    }
+    
+    .hamburger {
+      display: flex;
+    }
+    
+    nav ul {
+      position: fixed;
+      left: -100%;
+      top: 60px;
+      flex-direction: column;
+      background-color: rgba(23, 21, 59, 0.95);
+      backdrop-filter: blur(10px);
+      width: 100%;
+      text-align: center;
+      transition: 0.3s;
+      box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
+      padding: 20px 0;
+      gap: 0;
+      height: calc(100vh - 60px);
+      justify-content: flex-start;
+      padding-top: 50px;
+    }
+    
+    nav ul.active {
+      left: 0;
+    }
+    
+    nav ul li {
+      margin: 15px 0;
+    }
+    
+    nav ul li a {
+      font-size: 18px;
+      display: block;
+      padding: 15px;
+      border-radius: 10px;
+      margin: 0 20px;
+      transition: all 0.3s ease;
+    }
+    
+    nav ul li a:hover {
+      background-color: rgba(200, 172, 214, 0.2);
+      color: #C8ACD6;
+    }
+    
+    /* Adjust header padding for mobile */
+    header {
+      padding-top: 100px;
     }
   
-    main .about,
-    main .certificate,
-    main .project,
-    main .contact {
-        flex-direction: column;
-        align-items: center;
-        width: 100%;
+    /* Perbaikan untuk section about */
+    main .about {
+        flex-direction: column-reverse;
+        height: auto;
+        padding: 20px 10px;
         gap: 20px;
     }
-  
-    main .about .text,
-    main .about .grid,
-    main .certificate .card,
-    main .project .card,
-    main .contact form {
-        width: 95% !important;
-        min-width: 0;
+    
+    main .about .profile {
+        width: 95%;
+        order: 2;
     }
-  
+    
     main .about .grid {
+        width: 95%;
+        order: 1;
         grid-template-columns: 1fr;
-        gap: 10px;
+        gap: 15px;
+    }
+    
+    main .about .text h1 {
+        font-size: 2rem;
     }
   
-    main .certificate .card,
-    main .project .card {
-        width: 95% !important;
+    /* Perbaikan untuk section certificate */
+    main .certificate {
+        flex-direction: column;
+        height: auto;
+        padding: 20px 10px;
+        gap: 20px;
+    }
+    
+    main .certificate .card {
+        width: 95%;
         margin-bottom: 15px;
     }
-  
-    main .project .card {
-        grid-template-columns: 1fr;
-        font-size: 1rem;
+    
+    /* Perbaikan untuk section project */
+    main .project {
+        flex-direction: column;
+        height: auto;
+        padding: 20px 10px;
+        gap: 20px;
     }
-  
-    main .contact form {
-        /* gap: 10px; */
+    
+    main .project .card {
+        width: 95%;
         display: flex;
         flex-direction: column;
-        justify-content: space-around;
+        gap: 10px;
+    }
+    
+    main .project .card h1,
+    main .project .card p,
+    main .project .card a {
+        grid-column: unset;
+        grid-row: unset;
+    }
+    
+    main .project .card a {
+        align-self: flex-end;
+        background-color: white;
+        border-radius: 50%;
+        width: 50px;
+        height: 50px;
+        display: flex;
         align-items: center;
+        justify-content: center;
+    }
+    
+    /* Perbaikan untuk section contact */
+    main .contact {
+        flex-direction: column;
+        height: auto;
+        padding: 20px 10px;
+        gap: 20px;
+    }
+    
+    main .contact form {
+        width: 95%;
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
     }
   
     main .contact form #name,
@@ -515,12 +669,86 @@
     main .contact form textarea,
     main .contact form .submit {
         width: 100%;
+        grid-column: unset;
+        grid-row: unset;
+    }
+    
+    main .contact form textarea {
+        min-height: 120px;
+        resize: vertical;
+    }
+    
+    /* Perbaikan untuk heading responsive */
+    main .certificate h1,
+    main .project h1,
+    main .contact h1 {
+        font-size: 2.5rem;
     }
   
     footer {
         flex-direction: column;
         padding: 30px 10px;
         text-align: center;
+        gap: 15px;
+    }
+    
+    footer h1 {
+        font-size: 2rem;
+    }
+  }
+  
+  /* Untuk device sangat kecil */
+  @media screen and (max-width: 480px) {
+    header .text h1 {
+        font-size: 2rem;
+    }
+    
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    nav a {
+        font-size: 16px;
+    }
+    
+    main .certificate h1,
+    main .project h1,
+    main .contact h1 {
+        font-size: 2rem;
+    }
+    
+    main .about .text h1 {
+        font-size: 1.5rem;
+    }
+    
+    main .certificate .card h1,
+    main .project .card h1 {
+        font-size: 1.2rem;
+    }
+    
+    footer h1 {
+        font-size: 1.5rem;
+    }
+  }
+  
+  /* Perbaikan untuk landscape mode di mobile */
+  @media screen and (max-height: 500px) and (orientation: landscape) {
+    header {
+        height: auto;
+        min-height: 400px;
+    }
+    
+    header .text h1 {
+        font-size: 2rem;
+    }
+    
+    main .about,
+    main .certificate,
+    main .project,
+    main .contact {
+        height: auto;
+        min-height: 400px;
     }
   }
   
