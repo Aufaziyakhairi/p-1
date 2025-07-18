@@ -1,48 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>FellsHandsome</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
-        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-</head>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap"
+      rel="stylesheet"
+    />
+  </head>
 
-<body>
+  <body>
     <header id="home">
-        <div class="text">
-            <h1>Hallo</h1>
-            <p>It's me FellsHandsome</p>
-        </div>
-        <div class="gambar">
-            <img src="./Pictures/First.png" alt="cat" class="floating">
-        </div>
-        <a href="#about"><i class="fas fa-arrow-down"></i></a>
+      <div class="text">
+        <h1>Hallo</h1>
+        <p>It's me FellsHandsome</p>
+      </div>
+      <div class="gambar">
+        <img src="./Pictures/First.png" alt="cat" class="floating" />
+      </div>
+      <a href="#about"><i class="fas fa-arrow-down"></i></a>
     </header>
     <nav>
-        <div class="search">
-            <input type="text" id="searchInput" placeholder="Search">
-            <button type="button" id="searchButton">
-              <i class="fa-solid fa-magnifying-glass"></i>
-            </button>
-          </div>
-        <ul>
-            <li><a href="#home">Beranda</a></li>
-            <li><a href="#about">Tentang</a></li>
-            <li><a href="#certificate">Sertifikat</a></li>
-            <li><a href="#project">Projek</a></li>
-            <li><a href="#contact">Kontak</a></li>
-        </ul>
+      <div class="search">
+        <input type="text" id="searchInput" placeholder="Search" />
+        <button type="button" id="searchButton">
+          <i class="fa-solid fa-magnifying-glass"></i>
+        </button>
+      </div>
+      
+      <!-- Hamburger menu button -->
+      <div class="hamburger" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      
+      <ul id="navMenu">
+        <li><a href="#home">Beranda</a></li>
+        <li><a href="#about">Tentang</a></li>
+        <li><a href="#certificate">Sertifikat</a></li>
+        <li><a href="#project">Projek</a></li>
+        <li><a href="#contact">Kontak</a></li>
+      </ul>
     </nav>
     <main>
         <section class="about" id="about">
@@ -135,107 +151,144 @@
         </section>
     </main>
     <footer>
-        <h1>Thank You</h1>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste tempora facilis a, cumque cum officiis non
-            minima explicabo maiores quos veritatis. Blanditiis quasi saepe quod. &copy;2025</p>
+      <h1>Thank You</h1>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste tempora
+        facilis a, cumque cum officiis non minima explicabo maiores quos
+        veritatis. Blanditiis quasi saepe quod. &copy;2025
+      </p>
     </footer>
     <script>
-        // Tidak perlu show/hide section, cukup scroll ke target
-        function showSection(targetId) {
-            if (targetId === '#home') {
-                document.querySelector('header').scrollIntoView({ behavior: 'smooth' });
-            } else {
-                const section = document.querySelector(targetId);
-                if (section) section.scrollIntoView({ behavior: 'smooth' });
-            }
+      // Tidak perlu show/hide section, cukup scroll ke target
+      function showSection(targetId) {
+        if (targetId === "#home") {
+          document
+            .querySelector("header")
+            .scrollIntoView({ behavior: "smooth" });
+        } else {
+          const section = document.querySelector(targetId);
+          if (section) section.scrollIntoView({ behavior: "smooth" });
         }
+      }
 
-        document.addEventListener('DOMContentLoaded', function () {
-            const main = document.querySelector('main');
-            main.classList.add('fade-in');
-            const hash = window.location.hash || '#about';
-            showSection(hash);
+      document.addEventListener("DOMContentLoaded", function () {
+        const main = document.querySelector("main");
+        main.classList.add("fade-in");
+        const hash = window.location.hash || "#about";
+        showSection(hash);
+      });
+
+      window.addEventListener("beforeunload", function (e) {
+        const main = document.querySelector("main");
+        if (main) {
+          main.classList.remove("fade-in");
+          main.classList.add("fade-out");
+        }
+      });
+
+      document.querySelectorAll('nav a[href^="#"]').forEach(function (link) {
+        link.addEventListener("click", function (e) {
+          e.preventDefault();
+          const main = document.querySelector("main");
+          main.classList.remove("fade-in");
+          main.classList.add("fade-out");
+          const targetId = this.getAttribute("href");
+          setTimeout(function () {
+            window.location.hash = targetId;
+            showSection(targetId);
+            main.classList.remove("fade-out");
+            main.classList.add("fade-in");
+          }, 500);
+        });
+      });
+
+      const scrollElements = document.querySelectorAll(".scroll-reveal"); //Scroll reveal
+
+      const elementInView = (el, offset = 100) => {
+        const elementTop = el.getBoundingClientRect().top;
+        return (
+          elementTop <=
+          (window.innerHeight || document.documentElement.clientHeight) - offset
+        );
+      };
+
+      const displayScrollElement = (element) => {
+        element.classList.add("show");
+      };
+
+      const handleScrollAnimation = () => {
+        scrollElements.forEach((el) => {
+          if (elementInView(el)) {
+            displayScrollElement(el);
+          }
+        });
+      };
+
+      window.addEventListener("scroll", () => {
+        handleScrollAnimation();
+      });
+
+      function handleSearch() {
+        //Search
+        const input = document
+          .getElementById("searchInput")
+          .value.toLowerCase();
+        const sections = document.querySelectorAll("main section");
+
+        let found = false;
+
+        sections.forEach((section) => {
+          const text = section.textContent.toLowerCase();
+          if (text.includes(input)) {
+            section.scrollIntoView({ behavior: "smooth" });
+            found = true;
+          }
         });
 
-        window.addEventListener('beforeunload', function (e) {
-            const main = document.querySelector('main');
-            if (main) {
-                main.classList.remove('fade-in');
-                main.classList.add('fade-out');
-            }
+        if (!found) {
+          alert("Tidak ditemukan!");
+        }
+      }
+
+      // Klik tombol
+      document
+        .getElementById("searchButton")
+        .addEventListener("click", handleSearch);
+
+      // Tekan Enter
+      document
+        .getElementById("searchInput")
+        .addEventListener("keydown", function (e) {
+          if (e.key === "Enter") {
+            e.preventDefault();
+            handleSearch();
+          }
         });
-
-        document.querySelectorAll('nav a[href^="#"]').forEach(function(link) {
-            link.addEventListener('click', function(e) {
-                e.preventDefault();
-                const main = document.querySelector('main');
-                main.classList.remove('fade-in');
-                main.classList.add('fade-out');
-                const targetId = this.getAttribute('href');
-                setTimeout(function() {
-                    window.location.hash = targetId;
-                    showSection(targetId);
-                    main.classList.remove('fade-out');
-                    main.classList.add('fade-in');
-                }, 500);
-            });
+      
+      // Hamburger menu functionality
+      const hamburger = document.getElementById('hamburger');
+      const navMenu = document.getElementById('navMenu');
+      
+      hamburger.addEventListener('click', function() {
+        hamburger.classList.toggle('active');
+        navMenu.classList.toggle('active');
+      });
+      
+      // Close menu when clicking on nav links
+      document.querySelectorAll('nav ul li a').forEach(function(link) {
+        link.addEventListener('click', function() {
+          hamburger.classList.remove('active');
+          navMenu.classList.remove('active');
         });
-
-        const scrollElements = document.querySelectorAll('.scroll-reveal'); //Scroll reveal
-
-            const elementInView = (el, offset = 100) => {
-            const elementTop = el.getBoundingClientRect().top;
-            return (
-                elementTop <= (window.innerHeight || document.documentElement.clientHeight) - offset
-            );
-            };
-
-            const displayScrollElement = (element) => {
-            element.classList.add('show');
-            };
-
-            const handleScrollAnimation = () => {
-            scrollElements.forEach((el) => {
-                if (elementInView(el)) {
-                displayScrollElement(el);
-                }
-            });
-            };
-
-            window.addEventListener('scroll', () => {
-            handleScrollAnimation();
-        });
-
-        function handleSearch() { //Search
-                const input = document.getElementById('searchInput').value.toLowerCase();
-                const sections = document.querySelectorAll('main section');
-
-                let found = false;
-
-                sections.forEach(section => {
-                const text = section.textContent.toLowerCase();
-                if (text.includes(input)) {
-                    section.scrollIntoView({ behavior: 'smooth' });
-                    found = true;
-                }
-                });
-
-                if (!found) {
-                alert('Tidak ditemukan!');
-                }
-            }
-
-            // Klik tombol
-            document.getElementById('searchButton').addEventListener('click', handleSearch);
-
-            // Tekan Enter
-            document.getElementById('searchInput').addEventListener('keydown', function (e) {
-                if (e.key === 'Enter') {
-                e.preventDefault();
-                handleSearch();
-                }
-        });
+      });
+      
+      // Close menu when clicking outside
+      document.addEventListener('click', function(e) {
+        if (!nav.contains(e.target)) {
+          hamburger.classList.remove('active');
+          navMenu.classList.remove('active');
+        }
+      });
     </script>
-</body>
-
+  </body>
 </html>
